@@ -11,6 +11,9 @@ namespace ClassLibrary1
         public static void Main(string[] args)
         {
             Console.WriteLine("Bic DevOps Demo!");
+             var url = HttpContext.Current.Request.Url.AbsoluteUri;
+                            Uri myUri = new Uri(url);
+                            var realIpAddress = Dns.GetHostAddresses(myUri.Host)[0].ToString();
 
         }
     }
